@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samir Alam | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #050508;
+            --accent-purple: #7c3aed;
+            --accent-blue: #2563eb;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Moving Background Gradient */
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Hover Effects */
+        .hover-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+            transition: all 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesh-bg"></div>
+
+    <nav class="fixed w-full z-50 glass py-4 px-8 flex justify-between items-center border-b border-white/5">
+        <div class="text-xl font-bold tracking-tighter uppercase font-['Montserrat']">SAMIR<span class="text-purple-500">.</span>ALAM</div>
+        <div class="hidden md:flex space-x-8 text-xs font-medium uppercase">
+            <a href="#hero" class="hover:text-purple-400 transition">Home</a>
+            <a href="#about" class="hover:text-purple-400 transition">About</a>
+            <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+            <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <div class="mb-10 relative" data-aos="zoom-in">
+            <div class="w-48 h-48 rounded-3xl rotate-3 border-2 border-purple-500/20 p-2 glass overflow-hidden">
+                <img id="profile-img" src="https://via.placeholder.com/200" class="-rotate-3 w-full h-full object-cover rounded-2xl" alt="Samir">
+            </div>
+            <input type="file" id="upload" class="hidden" onchange="previewImg(event)">
+            <button onclick="document.getElementById('upload').click()" class="absolute -bottom-2 -right-2 bg-purple-600 p-3 rounded-full hover:scale-110 transition shadow-lg">
+                <i class="fas fa-camera text-sm"></i>
+            </button>
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-bold font-['Montserrat'] mb-4" data-aos="fade-up">SAMIR ALAM</h1>
+        <p class="text-lg md:text-2xl text-gray-400 tracking-[0.3em] mb-10 uppercase" data-aos="fade-up" data-aos-delay="200">
+            Web Developer & <span class="gradient-text">EEE Graduate</span>
+        </p>
+        
+        <div class="flex space-x-6" data-aos="fade-up" data-aos-delay="400">
+            <a href="#contact" class="bg-purple-600 px-10 py-4 rounded-xl font-bold hover:bg-purple-700 transition transform hover:scale-105 shadow-xl shadow-purple-900/40">Hire Me</a>
+            <a href="#projects" class="glass px-10 py-4 rounded-xl font-bold hover:bg-white/5 transition">View Projects</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6 max-w-5xl mx-auto">
+        <h2 class="section-title text-3xl mb-16 text-center" data-aos="fade-up">About <span class="text-purple-500">Me</span></h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="glass p-8 rounded-[2rem]" data-aos="fade-right">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">Career Objective</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6 italic">
+                    "I want to sharpen my industry-level skills and contribute to innovative and practical engineering solutions. I am eager to learn, adapt, and grow while adding real value through dedication and creativity."
+                </p>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-university text-3xl text-purple-500"></i>
+                    <div>
+                        <p class="text-sm font-bold">North South University</p>
+                        <p class="text-xs text-gray-500">B.Sc. in Electrical & Electronics Engineering (2020-2025)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6" data-aos="fade-left">
+                <h3 class="text-xl font-bold mb-4 border-l-4 border-purple-500 pl-4 uppercase">Internship Experience</h3>
+                <div class="glass p-6 rounded-2xl border-l-2 border-blue-500">
+                    <p class="text-blue-400 font-bold">Intern – Power Generation & Distribution</p>
+                    <p class="text-xs text-gray-500 mb-4 tracking-widest">Feb 2025 – May 2025</p>
+                    <ul class="text-xs text-gray-400 space-y-2">
+                        <li>• Monitored real-world power generation systems.</li>
+                        <li>• Gained exposure to substation components & safety protocols.</li>
+                        <li>• Analyzed electrical parameters and load distribution.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 bg-white/[0.01]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-3xl mb-20 text-center" data-aos="fade-up">Technical <span class="text-blue-500">Stack</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl hover-card" data-aos="fade-up">
+                    <i class="fas fa-laptop-code text-3xl text-purple-500 mb-6"></i>
+                    <h4 class="font-bold mb-6 uppercase tracking-tighter">Software Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/5 px-3 py-1 rounded-md text-[10px] border border-white/10">HTML5/CSS3</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-md text-[10px] border border-white/10">JavaScript</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-md text-[10px] border border-white/10">Python</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-md text-[10px] border border-white/10">MATLAB</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-md text-[10px] border border-white/10">AutoCAD</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-md text-[10px] border border-white/10">Arduino</span>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl hover-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-bolt text-3xl text-yellow-500 mb-6"></i>
+                    <h4 class="font-bold mb-6 uppercase tracking-tighter">EEE Core</h4>
+                    <ul class="text-xs text-gray-400 space-y-3">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> AC/DC Circuits</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Power Systems Basics</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Control Systems</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Renewable Energy</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-8 rounded-3xl hover-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-users text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="font-bold mb-6 uppercase tracking-tighter">Core Skills</h4>
+                    <ul class="text-xs text-gray-400 space-y-3">
+                        <li>• Quick Learning & Adaptability</li>
+                        <li>• Efficient Group Collaboration</li>
+                        <li>• Critical Problem Solving</li>
+                        <li>• Aviation Safety Compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 max-w-7xl mx-auto">
+        <h2 class="section-title text-3xl mb-20 text-center" data-aos="fade-up">Project <span class="text-green-500">Showcase</span></h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-[2.5rem] hover-card" data-aos="fade-up">
+                <span class="text-[10px] text-purple-400 font-bold uppercase tracking-widest mb-4 block">Automation</span>
+                <h3 class="text-2xl font-bold mb-4">RFID-Based Salary System</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Automatic employee entry tracking, working hour calculation, and hourly-based salary computation integrated for manual-free payroll handling.</p>
+                <div class="flex gap-4">
+                    <span class="text-[10px] text-gray-500 italic">#EmbeddedSystems</span>
+                    <span class="text-[10px] text-gray-500 italic">#DataProcessing</span>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-[2.5rem] hover-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-[10px] text-blue-400 font-bold uppercase tracking-widest mb-4 block">Sustainable Mobility</span>
+                <h3 class="text-2xl font-bold mb-4">Electric Vehicle (EV) Prototype</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Small-scale energy-efficient motor operation vehicle designed for experimental mobility concepts and basic power management.</p>
+                <div class="flex gap-4">
+                    <span class="text-[10px] text-gray-500 italic">#GreenEnergy</span>
+                    <span class="text-[10px] text-gray-500 italic">#MotorControl</span>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-[2.5rem] hover-card" data-aos="fade-up" data-aos-delay="400">
+                <span class="text-[10px] text-yellow-400 font-bold uppercase tracking-widest mb-4 block">Renewable Energy</span>
+                <h3 class="text-2xl font-bold mb-4">Solar-Based Charging Station for EVs</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Solar-powered EV charging system for clean energy utilization with scalable design. Microcontroller-based control using Raspberry Pi Pico and integrated sensors for voltage, current, and safety monitoring.</p>
+                <div class="flex gap-4">
+                    <span class="text-[10px] text-gray-500 italic">#SolarEnergy</span>
+                    <span class="text-[10px] text-gray-500 italic">#EnergyManagement</span>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-[2.5rem] hover-card" data-aos="fade-up" data-aos-delay="600">
+                <span class="text-[10px] text-green-400 font-bold uppercase tracking-widest mb-4 block">Smart Systems</span>
+                <h3 class="text-2xl font-bold mb-4">Home Automation System</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Smart control of household electrical appliances with improved energy efficiency. Integrated automated control logic for real-time response, enhanced security, and user-friendly operation.</p>
+                <div class="flex gap-4">
+                    <span class="text-[10px] text-gray-500 italic">#IoT</span>
+                    <span class="text-[10px] text-gray-500 italic">#Automation</span>
+                </div>
+            </div>
+            
+            </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[3rem] text-center border-t-2 border-purple-500" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold mb-8 font-['Montserrat'] uppercase">Let's <span class="gradient-text">Talk</span></h2>
+            <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Find Me At</h4>
+                    <p class="text-sm text-gray-400 mb-2"><i class="fas fa-envelope mr-3 text-purple-500"></i> md.samirsaad@gmail.com</p>
+                    <p class="text-sm text-gray-400 mb-2"><i class="fab fa-linkedin mr-3 text-blue-500"></i> <a href="https://www.linkedin.com/in/samir-alam-6176851ba/" target="_blank" class="hover:text-blue-400 transition">linkedin.com/in/samir-alam-6176851ba</a></p>
+                    <p class="text-sm text-gray-400"><i class="fas fa-map-marker-alt mr-3 text-red-500"></i> Dhaka, Bangladesh</p>
+                </div>
+                <div class="glass p-6 rounded-2xl bg-white/5">
+                    <p class="text-xs text-purple-400 font-bold mb-2">Best Coordinator Award</p>
+                    <p class="text-xs text-gray-300">NSU IEEE (Spring 2024)</p>
+                </div>
+            </div>
+            <a href="mailto:md.samirsaad@gmail.com" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:shadow-2xl transition">Send a Message</a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center opacity-40 text-[10px] uppercase tracking-[0.4em]">
+        &copy; 2026 Samir Alam | Built with precision & code
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true });
+
+        // Image Preview Handler
+        function previewImg(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('profile-img');
+                output.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        // Smooth Scroll Enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
